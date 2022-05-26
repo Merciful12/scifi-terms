@@ -25,4 +25,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: echo ${{ github.event_name }}
+      - run: |
+          export Test="hello world"
+        shell: bash -l {0}
+      - run: |
+          echo $Test
+        shell: bash -l {0}
+        
+      
